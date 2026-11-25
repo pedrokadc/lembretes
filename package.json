@@ -1,0 +1,10 @@
+{
+  "name": "conecta-escola",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma web para organização de atividades, provas e tarefas escolares.",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Projeto estatico pronto para deploy'"
+  }
+}
