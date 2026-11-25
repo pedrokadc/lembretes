@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso - Conecta Escola</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./auth.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🎓 Conecta Escola</h1>
+        <p>Acesse sua conta para gerenciar suas atividades escolares.</p>
+    </header>
+
+    <main class="auth-container">
+        <section class="auth-box">
+            <div class="auth-tabs">
+                <button type="button" id="tabLogin" class="filtro ativo">Entrar</button>
+                <button type="button" id="tabRegistro" class="filtro">Criar Conta</button>
+            </div>
+
+            <!-- FORMULÁRIO DE LOGIN -->
+            <form id="formLogin">
+                <h2>🔐 Entrar na conta</h2>
+
+                <label for="loginEmail">E-mail:</label>
+                <input type="email" id="loginEmail" placeholder="seuemail@escola.com" required>
+
+                <label for="loginSenha">Senha:</label>
+                <input type="password" id="loginSenha" placeholder="Digite sua senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <!-- FORMULÁRIO DE REGISTRO -->
+            <form id="formRegistro" class="oculto">
+                <h2>📝 Criar nova conta</h2>
+
+                <label for="regNome">Seu nome:</label>
+                <input type="text" id="regNome" placeholder="Ex: Maria Silva" required>
+
+                <label for="regEmail">E-mail:</label>
+                <input type="email" id="regEmail" placeholder="seuemail@escola.com" required>
+
+                <label for="regSenha">Senha:</label>
+                <input type="password" id="regSenha" placeholder="Mínimo 4 caracteres" minlength="4" required>
+
+                <button type="submit">Cadastrar e Entrar</button>
+            </form>
+
+            <p id="authMensagem" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Conecta Escola © 2026</p>
+        <p>Organização e tecnologia a favor da educação.</p>
+    </footer>
+</body>
+</html>
