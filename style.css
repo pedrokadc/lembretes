@@ -1,3 +1,316 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5fa;
+    color: #263347;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #243b64;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b8d5ff;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    max-width: 900px;
+    width: 92%;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    color: #243b64;
+    margin-bottom: 15px;
+}
+
+/* RESUMO */
+
+.resumo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.card-resumo {
+    background-color: #eaf0fa;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-resumo h3 {
+    font-size: 30px;
+    color: #243b64;
+}
+
+/* FORMULÁRIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #7899d0;
+    border-color: #7899d0;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+form button {
+    background-color: #243b64;
+    color: white;
+    margin-top: 15px;
+}
+
+form button:hover {
+    background-color: #36578d;
+}
+
+#mensagem {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* FILTROS */
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtro {
+    background-color: #e7ecf4;
+    color: #243b64;
+}
+
+.filtro:hover {
+    background-color: #d4deed;
+}
+
+.filtro.ativo {
+    background-color: #243b64;
+    color: white;
+}
+
+/* CARTÕES DE ATIVIDADES */
+
+.atividade {
+    border: 1px solid #dce2ec;
+    border-left: 5px solid #e4a52c;
+    border-radius: 9px;
+    padding: 16px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.atividade:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+.atividade.concluida {
+    border-left-color: #27945a;
+    background-color: #f2faf5;
+}
+
+.atividade.atrasada {
+    border-left-color: #d63c3c;
+}
+
+.atividade h3 {
+    color: #243b64;
+    margin-bottom: 5px;
+}
+
+.atividade p {
+    margin: 4px 0;
+    overflow-wrap: anywhere;
+}
+
+/* STATUS */
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 8px;
+    background-color: #fff0cc;
+    color: #815500;
+}
+
+.status.concluida {
+    background-color: #d9f2e2;
+    color: #17683c;
+}
+
+.status.atrasada {
+    background-color: #ffe0e0;
+    color: #a51e1e;
+}
+
+/* BOTÕES DAS ATIVIDADES */
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-concluir {
+    background-color: #27945a;
+    color: white;
+}
+
+.btn-excluir {
+    background-color: #d94343;
+    color: white;
+}
+
+.btn-concluir:hover {
+    background-color: #17683c;
+}
+
+.btn-excluir:hover {
+    background-color: #a51e1e;
+}
+
+/* LISTA VAZIA */
+
+.vazio {
+    text-align: center;
+    padding: 25px;
+    color: #788397;
+    background-color: #f5f7fa;
+    border-radius: 8px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #243b64;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .resumo {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .acoes button {
+        flex: 1;
+    }
+}
+
+
 /* TELA DE LOGIN E REGISTRO */
 
 .auth-container {
