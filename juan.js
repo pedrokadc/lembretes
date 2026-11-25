@@ -21,6 +21,22 @@ const botoesFiltro = document.querySelectorAll(".filtro");
 let atividades = [];
 let filtroAtual = "todas";
 
+const usuarioLogado = JSON.parse(localStorage.getItem("conectaEscola_usuarioLogado"));
+
+if (!usuarioLogado) {
+    window.location.href = "./login.html";
+} else {
+    const saudacao = document.querySelector("#inicio h2");
+    if (saudacao) {
+        saudacao.textContent = `Olá, ${usuarioLogado.nome}! 👋`;
+    }
+}
+
+document.getElementById("btnSair")?.addEventListener("click", () => {
+    localStorage.removeItem("conectaEscola_usuarioLogado");
+    window.location.href = "./login.html";
+});
+
 /* ==========================================
    MENSAGENS
    ========================================== */
